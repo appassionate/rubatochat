@@ -1,0 +1,14 @@
+auth:
+  algorithm: HS256
+  secret_key: "passlib_generated_key"
+
+database:
+
+  url: "sqlite:////home/username/rubato.db" #mysql:// using schema in sqlachemy
+  # username: 
+  # password: 
+
+server:
+
+  address: "localhost"
+  port: 6660

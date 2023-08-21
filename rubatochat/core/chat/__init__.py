@@ -1,0 +1,1 @@
+from rubatochat.core.chat.base import ChatOpenAIChat

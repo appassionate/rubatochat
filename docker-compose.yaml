@@ -1,0 +1,23 @@
+version: "3"
+
+#复制的模板
+
+services:
+  rubato:
+    image: notdecided # 基础镜像 #ubuntu?
+    container_name: rubato  # 容器名称
+    working_dir: /app # 切换工作目录
+    environment: # 环境变量
+      - PORT=6660 # 会使用config/nodes-${PORT}.conf这个配置文件
+    ports: # 映射端口，对外提供服务
+      - 6391:6770 # streamlit 前端端口
+      - 6660:6660 # 是否暴露后端端口？
+    stdin_open: true # 标准输入打开
+    tty: true # 后台运行不退出
+    network_mode: host # 使用host模式
+    privileged: true # 拥有容器内命令执行的权限
+    volumes:
+      - somedir/config:/config #配置文件目录映射到宿主机
+    entrypoint: # 设置服务默认的启动程序
+      - /bin/bash
+      - launch.sh
