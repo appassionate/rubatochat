@@ -10,5 +10,10 @@ database:
 
 server:
 
-  address: "localhost"
-  port: 6660
+  backend:
+    address: "0.0.0.0"
+    port: 6660
+
+  frontend:
+    address: "0.0.0.0"
+    port: 7770
