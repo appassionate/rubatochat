@@ -23,7 +23,9 @@ def load_config():
 
 _conf = load_config()
 
-BACKEND_ADDRESS= _conf["server"]["address"] + ":" + str(_conf["server"]["port"])
+_server = _conf["server"]
+FRONTEND_ADDRESS= _server["frontend"]["address"] + ":" + str(_server["frontend"]["port"])
+BACKEND_ADDRESS= _server["backend"]["address"] + ":" + str(_server["backend"]["port"])
 DB_URL = _conf["database"]["url"]
 
 SECRET_KEY = _conf["auth"]["secret_key"]
