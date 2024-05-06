@@ -1,3 +1,3 @@
 # rubatochat
 place a demo
-![screenshot-2](screenshot/2.png "screenshot-2")
+![screenshot-4](screenshot/4.png "screenshot-4")
